@@ -2,6 +2,7 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import AOS from 'aos';
 
+
 @Component({
   selector: 'app-portfolio',
   standalone: true,

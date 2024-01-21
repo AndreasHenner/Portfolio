@@ -11,7 +11,7 @@
 
 
 
-<section [class.hide-burger-menu]="!burgerMenuActive" [class.show-burger-menu]="burgerMenuActive">
+<section [class.show-burger-menu]="burgerMenuActive" [class.hide-burger-menu]="!burgerMenuActive">
     <div class="header-links-burger font-family-montserrat">
         <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#aboutMe">About me</a>
         <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#skillSet">Skill set</a>
