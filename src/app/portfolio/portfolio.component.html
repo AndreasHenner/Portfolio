@@ -1,0 +1,18 @@
+<img class="ellipse4" src="assets/images/ellipse4.png">
+
+<section *ngFor="let project of projects; let i = index" class="section-join" [class.section-right-to-left]="i % 2 !== 0" data-aos="zoom-in">
+ 
+    <img [class.object-fit]="project.image === 'assets/images/ringoffire.jpg'" class="project-img" [src]="project.image">
+   
+    <span>
+        <h1 class="font-family-baloo">{{ project.title }}</h1>
+        <h2 class="font-family-montserrat">{{ project.type }}</h2>
+        <h3 class="font-family-montserrat">{{ project.description }}</h3>
+        <div class="portfolio-buttons">
+            <button (click)="openGithub(i)" class="button-to-links">Github</button>  
+            <button (click)="openLivetest(i)" class="button-to-links">Live test</button>  
+        </div>
+    </span>
+</section> 
+
+<img class="ellipse9" src="assets/images/ellipse9.png">

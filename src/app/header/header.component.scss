@@ -1,0 +1,128 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 117px;
+    width: 100vw;
+  }
+  
+  .header-logo {
+    position: relative;
+    height: 69px;
+    width: 64px;
+    left: 100px;
+    z-index: 999;
+  }
+  
+  .header-links {
+    z-index: 200;
+    display: flex;
+    gap: 40px;
+    margin-right: 120px;
+  
+    a {
+      text-decoration: none;
+      font-size: 23px;
+      color: #5988ff;
+      font-weight: 400;
+  
+      &:hover {
+        filter: brightness(1.35);
+      }
+    }
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+  .burger-menu-button {
+    position: relative;
+    left: -23px !important;
+    z-index: 1500;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .header {
+      img {
+        left: 40px;
+      }
+    }
+  
+    .header-links {
+      background: linear-gradient(-90.99deg, #5988ff 17.89%, #ffffff 100.39%);
+      background-clip: text;
+      -webkit-background-clip: text !important;
+      color: transparent !important;
+    }
+  }
+  
+  @media (max-width: 720px) {
+    .header-links {
+      gap: 14px;
+      margin-right: 34px;
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .header-links {
+      display: none; /* Hier kannst du auch andere Stile für den Handymodus festlegen */
+    }
+  
+    .burger-menu-button {
+      display: block !important;
+    }
+  
+    .burger-menu-button:hover {
+      filter: brightness(1.35);
+    }
+  }
+  
+  // Burger-Menu
+  
+  .header-links-burger {
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 80px;
+  
+    a {
+      text-decoration: none;
+      font-size: 23px;
+      color: #5988ff;
+      font-weight: 400;
+  
+      &:hover {
+        filter: brightness(1.35);
+      }
+    }
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+  .show-burger-menu {
+    position: relative;
+    z-index: 999;
+    width: 100vw;
+    background-color: white;
+    transform: scale(1);
+    position: absolute;
+    height: 400px;
+    transition: transform 500ms ease-in;
+  }
+  
+  .hide-burger-menu {
+    height: 0;
+    overflow: hidden;
+    transform: scale(0);
+   
+  }

@@ -1,0 +1,126 @@
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
+  
+    span {
+      font-size: 23px;
+      font-family: "montserrat";
+      line-height: 27.6px;
+      width: 571px;
+      height: 252px;
+      margin-top: 70px;
+    }
+  }
+  
+  .about-me-title-div {
+    margin-left: 100px;
+    margin-top: 115px;
+  }
+  
+  .about-me-title {
+    font-size: 121px;
+    color: #5988ff;
+    line-height: 121px;
+  }
+  
+  .about-me-right-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+  }
+  
+  .ellipse6 {
+    margin-top: -315px;
+    left: 400px;
+    position: relative;
+  }
+  
+  .button-message {
+    border-radius: 10px;
+    font-size: 23px;
+    width: 254px;
+    height: 58px;
+    border: 2px solid #5988ff;
+    color: #5988ff;
+    top: 1472px;
+    left: 932px;
+    background-color: #ffffff;
+    transition: 300ms ease-in-out;
+  
+    &:hover {
+      cursor: pointer;
+      background: radial-gradient(
+        74.22% 74.22% at 19.79% 22.42%,
+        #5988ff 6.25%,
+        #5988ff 51.56%,
+        #0043f0 100%
+      );
+      color: white;
+      transition: 300ms ease-in-out;
+    }
+  }
+  
+  @media (max-width: 1350px) {
+    .about-me {
+      h1 {
+        font-size: 110px;
+      }
+    }
+  }
+  
+  @media (max-width: 1300px) {
+    .about-me {
+      h1 {
+        font-size: 75px;
+        line-height: 90px;
+        margin-top: -45px;
+      }
+  
+      span {
+        font-size: 18px;
+        width: 450px;
+      }
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .about-me {
+      position: relative;
+      left: 150px;
+      flex-direction: column;
+      margin-bottom: 46px;
+      margin-left: -275px;
+    }
+  
+    h1 {
+      margin-left: -205px;
+      margin-bottom: 50px;
+    }
+  
+    .ellipse6 {
+      left: 70px;
+    }
+  }
+  
+  @media (max-width: 520px) {
+    span {
+      margin-left: -90px;
+      width: 270px !important;
+    }
+    
+    .about-me {
+      margin-left: -200px;
+      h1 {
+        font-size: 63px;
+        margin-left: -175px;
+      }
+    }
+  
+    .button-message {
+      margin-left: -110px;
+      margin-top: 130px!important;
+    }
+  }

@@ -1,0 +1,22 @@
+
+<section class="header">
+    <img class="header-logo" src="assets/images/logo.png">
+    <span [class.display-none]="hideHeader" class="header-links font-family-montserrat">
+        <a href="#aboutMe">About me</a>
+        <a href="#skillSet">Skill set</a>
+        <a href="#myWork">My work</a>
+    </span> 
+    <img [class.display-none]="!hideHeader" (click)="toggleBurgerMenu(burgerMenuActive)" class="burger-menu-button" src="assets/images/burgerMenu.png">
+</section>
+
+
+
+<section [class.hide-burger-menu]="!burgerMenuActive" [class.show-burger-menu]="burgerMenuActive">
+    <div class="header-links-burger font-family-montserrat">
+        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#aboutMe">About me</a>
+        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#skillSet">Skill set</a>
+        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#myWork">My work</a>
+        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="">Contact</a>
+    </div> 
+
+</section>
