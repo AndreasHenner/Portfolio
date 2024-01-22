@@ -80,7 +80,7 @@
 
 @media (max-width: 520px) {
   .skill-set {
-    margin-top: 750px;
+    margin-top: 600px;
   }
 }
 
@@ -94,5 +94,11 @@
       gap: 30px;
       max-width: 250px !important;
     }
+  }
+}
+
+@media (min-width: 1300px) {
+  .skill-set-icons {
+    gap: 160px;
   }
 }

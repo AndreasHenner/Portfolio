@@ -20,7 +20,7 @@ export class PortfolioComponent implements OnInit {
       title: 'Join',
       type: 'Angular | Typescript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      linklivetest:'https://andreas-henner.developerakademie.net/Join/addTask.html',
+      linklivetest:'https://andreas-henner.com/Join/index.html',
       linkgithub: 'https://github.com/AndreasHenner/Join624',
     },
 
@@ -29,7 +29,7 @@ export class PortfolioComponent implements OnInit {
       title: 'El Pollo Loco',
       type: 'Javascript | HTML | CSS',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      linklivetest: 'https://andreas-henner.developerakademie.net/El%20Pollo%20Loco/El%20Pollo%20Loco/index.html',
+      linklivetest: 'https://andreas-henner.com/El%20Pollo%20Loco/index.html',
       linkgithub: 'https://github.com/AndreasHenner/El-Pollo-Loco',
     },
 
