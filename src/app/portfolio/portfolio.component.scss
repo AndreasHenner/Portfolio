@@ -75,7 +75,7 @@ section {
   .ellipse4 {
     left: 0px;
     position: absolute;
-    top: 2800px;
+    top: 3000px;
   }
   
   .project-img {
@@ -127,6 +127,10 @@ section {
       height: 390px;
       top: 3600px;
     }
+
+    .ellipse4 {
+      top: 3150px;
+    }
   }
   
   @media (max-width: 750px) {
@@ -156,7 +160,7 @@ section {
   
   @media (max-width: 520px) {
     .ellipse4 {
-      top: 2960px;
+      top: 3400px;
     }
   }
   

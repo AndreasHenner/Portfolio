@@ -16,7 +16,7 @@
   
   .about-me-title-div {
     margin-left: 100px;
-    margin-top: 115px;
+    margin-top: -170px;
   }
   
   .about-me-title {
@@ -37,7 +37,7 @@
 }
   
   .ellipse6 {
-    margin-top: -315px;
+    margin-top: -500px;
     left: 400px;
     position: relative;
   }
@@ -50,6 +50,7 @@
     border: 2px solid #5988ff;
     color: #5988ff;
     top: 1472px;
+    margin-top: 290px;
     left: 932px;
     background-color: #ffffff;
     transition: 300ms ease-in-out;
@@ -96,7 +97,14 @@
       left: 150px;
       flex-direction: column;
       margin-bottom: 46px;
+      margin-top: 350px;
       margin-left: -275px;
+    }
+
+    .about-me-right-section {
+      span {
+        margin-top: 250px;
+      }
     }
   
     h1 {
@@ -105,7 +113,8 @@
     }
   
     .ellipse6 {
-      left: 70px;
+      left: 200px;
+      top: 80px;
     }
   }
   
@@ -126,6 +135,11 @@
   
     .button-message {
       margin-left: -110px;
-      margin-top: 130px!important;
+      margin-top: 600px!important;
+    }
+
+    .ellipse6 {
+      left: 70px;
+      top: 160px;
     }
   }

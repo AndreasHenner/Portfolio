@@ -2,12 +2,17 @@
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
+
   
     > img {
       position: relative;
       top: 230px;
       left: 150px;
     }
+  }
+
+  .ellipse5 {
+    top: 100px!important;
   }
   
   .my-work {
@@ -54,7 +59,7 @@
   
   @media (max-width: 1000px) {
     .my-work-div {
-      margin-top: -95px;
+      margin-top: 0;
     }
   }
   
