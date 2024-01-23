@@ -9,10 +9,10 @@
     </div>
 
     <form action="https://andreas-henner.com/send_mail/send_mail.php" method="post">
-        <input required class="font-family-montserrat" placeholder="Your name" type="text" name="name">
-        <input required class="font-family-montserrat" placeholder="Your email" type="email">
-        <textarea required class="font-family-montserrat" placeholder="Your message" name="message" id=""></textarea>
-        <button class="font-family-montserrat">Say hello ;)</button>
+        <input id="nameInput" required class="font-family-montserrat" placeholder="Your name" type="text" name="name">
+        <input id="emailInput" required class="font-family-montserrat" placeholder="Your email" type="email">
+        <textarea id="textareaInput" required class="font-family-montserrat" placeholder="Your message" name="message"></textarea>
+        <button (click)="emptyInputfields()" class="font-family-montserrat">Say hello ;)</button>
     </form>
     
 </section>

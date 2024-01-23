@@ -9,12 +9,13 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { MyWorkTitleComponent } from './my-work-title/my-work-title.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-
+import { ImprintComponent } from './imprint/imprint.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
+
  
   imports: [
     CommonModule,
@@ -26,7 +27,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     MyWorkTitleComponent,
     FooterComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    ImprintComponent
   ],
 
   templateUrl: './app.component.html',
@@ -36,5 +38,11 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 export class AppComponent  {
   title = 'portfolio';
   hideHeader = false;
+  imprintClicked: boolean = false;
+
+  openImprint() {
+    this.imprintClicked = true;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 

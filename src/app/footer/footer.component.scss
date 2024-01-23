@@ -87,3 +87,12 @@
       margin-right: 0px;
     }
   }
+
+  a {
+    &:hover{
+      filter: drop-shadow(5px 5px 12px rgb(220, 223, 230));
+      cursor: pointer;
+      transform: translate3d(5px, 5px, 5px);
+      transition: 225ms ease;
+    }
+  }
