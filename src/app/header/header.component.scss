@@ -46,6 +46,12 @@
       cursor: pointer;
     }
   }
+
+  @media (max-width: 1300px) {
+    .footer {
+      margin-top: 5450px;
+    }
+  }
   
   @media (max-width: 1000px) {
     .header {
@@ -121,8 +127,11 @@
   }
   
   .hide-burger-menu {
-    height: 0;
-    overflow: hidden;
+    z-index: 999;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    height: 400px;
     transform: scale(0);
     transition: transform 500ms ease-in-out;
   }

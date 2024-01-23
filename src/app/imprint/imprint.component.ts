@@ -10,9 +10,7 @@ import { Component, Input } from '@angular/core';
 export class ImprintComponent {
   @Input() imprintClicked: boolean = false;
   
-constructor() {
-
-}
+constructor() {}
 
 closeImprint() {
   this.imprintClicked = false;
