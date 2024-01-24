@@ -2,7 +2,7 @@
 
 <section *ngFor="let project of projects; let i = index" class="section-join" [class.section-right-to-left]="i % 2 !== 0" data-aos="zoom-in">
  
-    <img [class.object-fit]="project.image === 'assets/images/ringoffire.jpg'" class="project-img" [src]="project.image">
+    <img [class.object-fit]="project.image === 'assets/images/ringoffire.jpg'" class="project-img" [src]="getProjectImage(project)">
    
     <span>
         <h1 class="font-family-baloo">{{ project.title }}</h1>

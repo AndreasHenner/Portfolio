@@ -13,12 +13,15 @@ export class ContactComponent {
   }
 
   emptyInputfields() {
-    let nameInput: HTMLInputElement | null = document.getElementById('nameInput') as HTMLInputElement;
-    let emailInput: HTMLInputElement | null = document.getElementById('emailInput') as HTMLInputElement;
-    let textareaInput: HTMLTextAreaElement | null = document.getElementById('textareaInput') as HTMLTextAreaElement;
+    let nameInput = document.getElementById('nameInput') as HTMLInputElement;
+    let emailInput = document.getElementById('emailInput') as HTMLInputElement;
+    let textareaInput = document.getElementById('textareaInput') as HTMLTextAreaElement;
 
+    setTimeout(() => {
     nameInput.value = '';
     emailInput.value = '';
     textareaInput.value = '';
+},1000) 
+  
   }
 }

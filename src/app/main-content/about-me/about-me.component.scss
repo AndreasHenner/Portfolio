@@ -69,6 +69,15 @@
     }
   }
 
+ .button-link {
+  color: #5988ff;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+ }
+
   @media (max-width: 1450px) {
     .about-me-right-section {
       span {

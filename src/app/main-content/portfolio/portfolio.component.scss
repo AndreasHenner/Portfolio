@@ -69,7 +69,7 @@ section {
   .ellipse9 {
     right: 0;
     position: absolute;
-    top: 3000px;
+    top: 4100px;
     z-index: -999;
   }
   
@@ -126,7 +126,7 @@ section {
   
     .ellipse9 {
       height: 390px;
-      top: 3600px;
+      top: 4100px;
     }
 
     .ellipse4 {
@@ -139,6 +139,7 @@ section {
       img {
         width: 400px;
         height: 250px;
+        object-fit: cover;
       }
   
       span {
@@ -162,6 +163,10 @@ section {
   @media (max-width: 520px) {
     .ellipse4 {
       top: 3400px;
+    }
+
+    .ellipse9 {
+      top: 4500px;
     }
   }
   

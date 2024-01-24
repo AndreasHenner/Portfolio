@@ -21,7 +21,7 @@ export class PortfolioComponent implements OnInit {
       type: 'Angular | Typescript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       linklivetest:'https://andreas-henner.com/Join/index.html',
-      linkgithub: 'https://github.com/AndreasHenner/Join624',
+      linkgithub: 'https://github.com/AndreasHenner/join',
     },
 
     {
@@ -73,5 +73,14 @@ export class PortfolioComponent implements OnInit {
   openLivetest(i: any): void {
     let livetest = this.projects[i].linklivetest;
     window.open(livetest);
+  }
+
+    getProjectImage(project: any): string {
+    // Ändere die Bildquelle basierend auf Bedingungen
+    if (window.innerWidth < 750 && project.image === 'assets/images/ringoffire.jpg') {
+      return 'assets/images/ringOfFireLittle.png'; // Bildquelle für kleine Bildschirme
+    } else {
+      return project.image; // Standardbildquelle
+    }
   }
 }
