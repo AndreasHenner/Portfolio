@@ -47,12 +47,6 @@
     }
   }
 
-  @media (max-width: 1300px) {
-    .footer {
-      margin-top: 5450px;
-    }
-  }
-  
   @media (max-width: 1000px) {
     .header {
       img {
@@ -117,7 +111,7 @@
   }
   
   .show-burger-menu {
-    z-index: 999;
+    z-index: 3100;
     width: 100vw;
     background-color: white;
     position: absolute;
@@ -127,7 +121,7 @@
   }
   
   .hide-burger-menu {
-    z-index: 999;
+    z-index: 3100;
     width: 100vw;
     background-color: white;
     position: absolute;

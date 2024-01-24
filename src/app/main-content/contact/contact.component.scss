@@ -105,12 +105,12 @@ section {
     left: 16px;
     position: relative;
     top: 9px;
-    background-image: url("./../../assets/images/buttonUpBlue.png");
+    background-image: url("./../../../assets/images/buttonUpBlue.png");
     transition: 225ms ease-in-out;
   
     &:hover {
       cursor: pointer;
-      background-image: url("./../../assets/images/butttonUpWhite.png");
+      background-image: url("./../../../assets/images/butttonUpWhite.png");
     }
   }
   
