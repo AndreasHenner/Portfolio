@@ -2,7 +2,6 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import AOS from 'aos';
 
-
 @Component({
   selector: 'app-portfolio',
   standalone: true,
@@ -13,14 +12,18 @@ import AOS from 'aos';
 export class PortfolioComponent implements OnInit {
   @Input() customClass: string = '';
   @Input() title: string = '';
+  id = '';
+
+  constructor() {}
 
   projects: any = [
     {
       image: 'assets/images/joinPortfolio.png',
       title: 'Join',
-      type: 'Angular | Typescript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      linklivetest:'https://andreas-henner.com/Join/index.html',
+      type: 'Javascript | HTML | CSS',
+      description:
+        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      linklivetest: 'https://andreas-henner.com/Join/index.html',
       linkgithub: 'https://github.com/AndreasHenner/join',
     },
 
@@ -28,7 +31,8 @@ export class PortfolioComponent implements OnInit {
       image: 'assets/images/polloLoco.png',
       title: 'El Pollo Loco',
       type: 'Javascript | HTML | CSS',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description:
+        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       linklivetest: 'https://andreas-henner.com/El%20Pollo%20Loco/index.html',
       linkgithub: 'https://github.com/AndreasHenner/El-Pollo-Loco',
     },
@@ -61,8 +65,8 @@ export class PortfolioComponent implements OnInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      AOS.refresh()
-    }, 500)
+      AOS.refresh();
+    }, 500);
   }
 
   openGithub(i: any): void {
@@ -75,12 +79,39 @@ export class PortfolioComponent implements OnInit {
     window.open(livetest);
   }
 
-    getProjectImage(project: any): string {
+  getProjectImage(project: any): string {
     // Ändere die Bildquelle basierend auf Bedingungen
-    if (window.innerWidth < 750 && project.image === 'assets/images/ringoffire.jpg') {
+    if (
+      window.innerWidth < 750 &&
+      project.image === 'assets/images/ringoffire.jpg'
+    ) {
       return 'assets/images/ringOfFireLittle.png'; // Bildquelle für kleine Bildschirme
     } else {
       return project.image; // Standardbildquelle
+    }
+  }
+
+  javascriptActive = false;
+  angularActive = false;
+  firebaseActive = false;
+
+  filterProjects(id: string) {
+    if (id === 'javascript') {
+      this.javascriptActive = true;
+      this.angularActive = false; // Setze angularActive und firebaseActive auf false
+      this.firebaseActive = false;
+    } else if (id === 'angular') {
+      this.angularActive = true;
+      this.javascriptActive = false; // Setze javascriptActive und firebaseActive auf false
+      this.firebaseActive = false;
+    } else if (id === 'firebase') {
+      this.firebaseActive = true;
+      this.javascriptActive = false; // Setze javascriptActive und angularActive auf false
+      this.angularActive = false;
+    } else if (id === 'all') {
+      this.firebaseActive = false;
+      this.javascriptActive = false; 
+      this.angularActive = false;
     }
   }
 }

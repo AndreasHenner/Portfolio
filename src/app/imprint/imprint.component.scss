@@ -21,21 +21,33 @@
     }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 480px) {
     .show-imprint {
-        height: 175vh;
+        height: 180vh;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
+    .show-imprint {
+        height: 190vh;
+    }
+}
+
+@media (max-width: 410px) {
     .show-imprint {
         height: 200vh;
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 385px) {
     .show-imprint {
         height: 235vh;
+    }
+
+    @media (max-width: 350px) {
+        .show-imprint {
+            height: 270vh;
+        }
     }
 }
 

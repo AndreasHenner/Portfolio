@@ -36,6 +36,46 @@
   .my-work-ellipse {
     margin-top: -70px;
   }
+
+  .button-to-links {
+    border-radius: 10px;
+    font-size: 23px;
+    width: 137px;
+    height: 58px;
+    border: 2px solid #5988ff;
+    color: #5988ff;
+    background-color: #ffffff;
+    transition: 300ms ease-in-out;
+  
+    &:hover {
+      cursor: pointer;
+      border: white;
+      transition: 300ms ease-in-out;
+      background: radial-gradient(
+        74.22% 74.22% at 19.79% 22.42%,
+        #5988ff 6.25%,
+        #5988ff 51.56%,
+        #0043f0 100%
+      );
+      color: white;
+    }
+  }
+
+  
+  .filter-button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 327px;
+    margin-right: 294px;
+
+    button {
+      &:focus {
+       background-color: #5988ff;
+       color: white;
+      }
+    }
+  }
   
   @media (max-width: 1300px) {
     .my-work {
