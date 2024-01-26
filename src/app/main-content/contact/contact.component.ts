@@ -24,4 +24,5 @@ export class ContactComponent {
 },1000) 
   
   }
+
 }

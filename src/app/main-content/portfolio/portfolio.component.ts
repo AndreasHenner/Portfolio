@@ -21,8 +21,7 @@ export class PortfolioComponent implements OnInit {
       image: 'assets/images/joinPortfolio.png',
       title: 'Join',
       type: 'Javascript | HTML | CSS',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       linklivetest: 'https://andreas-henner.com/Join/index.html',
       linkgithub: 'https://github.com/AndreasHenner/join',
     },
@@ -31,8 +30,7 @@ export class PortfolioComponent implements OnInit {
       image: 'assets/images/polloLoco.png',
       title: 'El Pollo Loco',
       type: 'Javascript | HTML | CSS',
-      description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       linklivetest: 'https://andreas-henner.com/El%20Pollo%20Loco/index.html',
       linkgithub: 'https://github.com/AndreasHenner/El-Pollo-Loco',
     },
@@ -41,9 +39,8 @@ export class PortfolioComponent implements OnInit {
       image: 'assets/images/ringoffire.jpg',
       title: 'Ring of fire',
       type: 'Angular | Typescript | HTML | CSS | Firebase',
-      description:
-        'A fun card game that you also can play online with your friends. You take it in turns to draw a card. After each move, you have to follow the displayed hint.',
-      linklivetest: '',
+      description: 'A fun card game that you also can play online with your friends. You take it in turns to draw a card. After each move, you have to follow the displayed hint.',
+      linklivetest: 'https://andreas-henner.com/ringoffire/index.html',
       linkgithub: 'https://github.com/AndreasHenner/ringoffire',
     },
 
@@ -59,8 +56,9 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init({
-      duration: 1800,
-      offset: -250,
+      duration: 1400,
+      offset: -400,
+    
     });
   }
 
