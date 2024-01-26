@@ -59,14 +59,15 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init({
-      duration: 1500,
+      duration: 1800,
+      offset: -250,
     });
   }
 
   ngAfterViewInit(): void {
     setTimeout(() => {
       AOS.refresh();
-    }, 500);
+    }, 200);
   }
 
   openGithub(i: any): void {
