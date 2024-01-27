@@ -56,9 +56,8 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init({
-      duration: 1400,
-      offset: -400,
-    
+      duration: 1800,
+      offset: -200,
     });
   }
 
