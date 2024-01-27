@@ -40,13 +40,18 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {}
-  
+
   germanActivated = false;
 
   toggleLanguage(id: any) {
     this.germanActivated = !this.germanActivated;
     console.log(this.germanActivated);
-    this.headerTranslate(id);
+    if (id === 'de1' || id === 'en1') {
+      this.headerTranslate(id);
+    } else {
+      this.burgerMenuTranslate(id);
+    }
+   
   }
 
   headerTranslate(id: any) {
@@ -54,15 +59,35 @@ export class HeaderComponent implements OnInit {
     let skillSetLink: any = document.getElementById('skillSet1');
     let myWorkLink: any = document.getElementById('myWork1');
 
-    if (id === 'en') {
+    if (id === 'en1') {
       aboutMeLink.textContent = 'About me';
       skillSetLink.textContent = 'Skill set';
       myWorkLink.textContent = 'My work';
     }
-    if (id === 'de') {
+    if (id === 'de1') {
       aboutMeLink.textContent = 'Über mich';
       skillSetLink.textContent = 'Fähigkeiten';
       myWorkLink.textContent = 'Meine Projekte';
+    }
+  }
+
+  burgerMenuTranslate(id: any) {
+    let aboutMeLink: any = document.getElementById('aboutMeBurger');
+    let skillSetLink: any = document.getElementById('skillSetBurger');
+    let myWorkLink: any = document.getElementById('myWorkBurger');
+    let contactLink: any = document.getElementById('contactBurger');
+
+    if (id === 'enBurger') {
+      aboutMeLink.textContent = 'About me';
+      skillSetLink.textContent = 'Skill set';
+      myWorkLink.textContent = 'My work';
+      contactLink.textContent = 'Contact';
+    }
+    if (id === 'deBurger') {
+      aboutMeLink.textContent = 'Über mich';
+      skillSetLink.textContent = 'Fähigkeiten';
+      myWorkLink.textContent = 'Meine Projekte';
+      contactLink.textContent = 'Kontakt';
     }
   }
 }

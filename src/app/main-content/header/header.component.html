@@ -7,8 +7,8 @@
         <a id="skillSet1" href="#skillSet">Skill set</a>
         <a id="myWork1" href="#myWork">My work</a>
         <div class="languages">
-            <a (click)="toggleLanguage('de')">DE |</a>
-            <a (click)="toggleLanguage('en')"> EN</a>
+            <a (click)="toggleLanguage('de1')">DE |</a>
+            <a (click)="toggleLanguage('en1')"> EN</a>
         </div>
         
     </span> 
@@ -17,14 +17,14 @@
 
 <section [class.show-burger-menu]="burgerMenuActive" [class.hide-burger-menu]="!burgerMenuActive">
     <div class="header-links-burger font-family-montserrat">
-        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#home">Home</a>
-        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#aboutMe">About me</a>
-        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#skillSet">Skill set</a>
-        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#myWork">My work</a>
-        <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#contact">Contact</a>
+        <a id="homeBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#home">Home</a>
+        <a id="aboutMeBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#aboutMe">About me</a>
+        <a id="skillSetBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#skillSet">Skill set</a>
+        <a id="myWorkBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#myWork">My work</a>
+        <a id="contactBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#contact">Contact</a>
         <div class="languages">
-            <a (click)="headerTranslate('de')">DE |</a>
-            <a (click)="headerTranslate('en')"> EN</a>
+            <a (click)="toggleLanguage('deBurger')">DE |</a>
+            <a (click)="toggleLanguage('enBurger')"> EN</a>
         </div>
     </div> 
 
