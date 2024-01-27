@@ -5,8 +5,8 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { HeaderComponent } from './main-content/header/header.component';
-import { TranslateService } from '@ngx-translate/core';
-import { HttpClientModule} from '@angular/common/http';
+
+
 
 @Component({
   selector: 'app-root',
@@ -17,21 +17,14 @@ import { HttpClientModule} from '@angular/common/http';
     MainContentComponent,
     FooterComponent,
     ImprintComponent,
-    HeaderComponent,
-    HttpClientModule
+    HeaderComponent
   ],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 
-
 export class AppComponent  {
-
-  constructor(public translate: TranslateService) {
-    translate.use('en');
-  }
-
   title = 'portfolio';
   hideHeader = false;
   imprintClicked: boolean = false;
