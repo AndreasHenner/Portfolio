@@ -40,7 +40,7 @@ export class PortfolioComponent implements OnInit {
       title: 'Ring of fire',
       type: 'Angular | Typescript | HTML | CSS | Firebase',
       description: 'A fun card game that you also can play online with your friends. You take it in turns to draw a card. After each move, you have to follow the displayed hint.',
-      linklivetest: 'https://andreas-henner.com/ringoffire/index.html',
+      linklivetest: 'https://andreas-henner.com/Ringoffire/index.html',
       linkgithub: 'https://github.com/AndreasHenner/ringoffire',
     },
 
