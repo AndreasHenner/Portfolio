@@ -2,15 +2,18 @@
 <section id="home" class="header">
     <img class="header-logo" src="assets/images/logo.png">
     <span [class.display-none]="hideHeader" class="header-links font-family-montserrat">
-        <a href="#home">Home</a>
-        <a href="#aboutMe">About me</a>
-        <a href="#skillSet">Skill set</a>
-        <a href="#myWork">My work</a>
+        <a id="home1" href="#home">Home</a>
+        <a id="aboutMe1" href="#aboutMe">About me</a>
+        <a id="skillSet1" href="#skillSet">Skill set</a>
+        <a id="myWork1" href="#myWork">My work</a>
+        <div class="languages">
+            <a (click)="toggleLanguage('de')">DE |</a>
+            <a (click)="toggleLanguage('en')"> EN</a>
+        </div>
+        
     </span> 
     <img [class.display-none]="!hideHeader" (click)="toggleBurgerMenu(burgerMenuActive)" class="burger-menu-button" src="assets/images/burgerMenu.png">
 </section>
-
-
 
 <section [class.show-burger-menu]="burgerMenuActive" [class.hide-burger-menu]="!burgerMenuActive">
     <div class="header-links-burger font-family-montserrat">
@@ -19,6 +22,10 @@
         <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#skillSet">Skill set</a>
         <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#myWork">My work</a>
         <a (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#contact">Contact</a>
+        <div class="languages">
+            <a (click)="headerTranslate('de')">DE |</a>
+            <a (click)="headerTranslate('en')"> EN</a>
+        </div>
     </div> 
 
 </section>

@@ -1,0 +1,10 @@
+{
+  "en": {
+    "header-link-1": "Home",
+    "header-link-2": "About me"
+  },
+  "de": {
+    "header-link-1": "Startseite",
+    "header-link-2": "Über mich"
+  }
+}
