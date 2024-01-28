@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Inject } from '@angular/core';
 import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { LanguageService } from './../../language.service';
+
 
 @Component({
   selector: 'app-header',
@@ -15,7 +17,8 @@ export class HeaderComponent implements OnInit {
   hideHeader = false;
   burgerMenuActive = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private languageService: LanguageService) {
     if (isPlatformBrowser(this.platformId)) {
       // Code, der nur im Browser-Kontext ausgeführt wird
 
@@ -44,14 +47,12 @@ export class HeaderComponent implements OnInit {
   germanActivated = false;
 
   toggleLanguage(id: any) {
-    this.germanActivated = !this.germanActivated;
-    console.log(this.germanActivated);
     if (id === 'de1' || id === 'en1') {
       this.headerTranslate(id);
     } else {
       this.burgerMenuTranslate(id);
     }
-   
+    console.log('German Activated in Header Section:', this.germanActivated);
   }
 
   headerTranslate(id: any) {
@@ -60,11 +61,15 @@ export class HeaderComponent implements OnInit {
     let myWorkLink: any = document.getElementById('myWork1');
 
     if (id === 'en1') {
+      this.germanActivated = false;
+      this.languageService.setGermanActivated(false);
       aboutMeLink.textContent = 'About me';
       skillSetLink.textContent = 'Skill set';
       myWorkLink.textContent = 'My work';
     }
     if (id === 'de1') {
+      this.germanActivated = true;
+      this.languageService.setGermanActivated(true);
       aboutMeLink.textContent = 'Über mich';
       skillSetLink.textContent = 'Fähigkeiten';
       myWorkLink.textContent = 'Meine Projekte';
@@ -78,12 +83,14 @@ export class HeaderComponent implements OnInit {
     let contactLink: any = document.getElementById('contactBurger');
 
     if (id === 'enBurger') {
+      this.germanActivated = false;
       aboutMeLink.textContent = 'About me';
       skillSetLink.textContent = 'Skill set';
       myWorkLink.textContent = 'My work';
       contactLink.textContent = 'Contact';
     }
     if (id === 'deBurger') {
+      this.germanActivated = true;
       aboutMeLink.textContent = 'Über mich';
       skillSetLink.textContent = 'Fähigkeiten';
       myWorkLink.textContent = 'Meine Projekte';
