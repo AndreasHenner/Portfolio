@@ -6,22 +6,25 @@ import { LanguageService } from './../../language.service';
   standalone: true,
   imports: [],
   templateUrl: './title-section.component.html',
-  styleUrl: './title-section.component.scss'
-
+  styleUrl: './title-section.component.scss',
 })
 export class TitleSectionComponent implements OnInit {
   germanActivated: boolean = false;
 
-  constructor(private languageService: LanguageService) { }
+  constructor(private languageService: LanguageService) {}
 
   ngOnInit(): void {
-    this.germanActivated = this.languageService.getGermanActivated();
-    console.log('German Activated in Title Section:', this.germanActivated);
+    this.languageService.germanActivated$.subscribe((value) => {
+      this.germanActivated = value;
+      if (this.germanActivated) {
+        this.translateTitle();
+      }
+    });
   }
-
-  titleTranslate() {
-    if (this.germanActivated) {
-      console.log('title:', this.germanActivated);
-    }
+  translateTitle() {
+    let h2: any = document.getElementById('h2');
+    let h1: any = document.getElementById('h1');
+    h2.textContent = 'Hallo! ich bin Andy';
+    h1.textContent = 'Entwickler';
   }
 }
