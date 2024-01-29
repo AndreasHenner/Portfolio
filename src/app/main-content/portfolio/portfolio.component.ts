@@ -1,6 +1,5 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import AOS from 'aos';
 import { LanguageService } from './../../language.service';
 
 @Component({
@@ -20,10 +19,7 @@ export class PortfolioComponent implements OnInit {
   constructor(private languageService: LanguageService) {}
 
   ngOnInit(): void {
-    AOS.init({
-      duration: 1800,
-      offset: -200,
-    });
+   
 
     this.languageService.germanActivated$.subscribe((value) => {
       this.germanActivated = value;
@@ -95,11 +91,7 @@ export class PortfolioComponent implements OnInit {
     },
   ];
 
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      AOS.refresh();
-    }, 200);
-  }
+
 
   openGithub(i: any): void {
     let github = this.projects[i].linkgithub;
