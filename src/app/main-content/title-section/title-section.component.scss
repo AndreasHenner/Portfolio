@@ -14,7 +14,12 @@
       left: 731px;
       font-size: 64px;
       color: #5988ff;
+      width: 1000px;
     }
+  }
+
+  .h1-german {
+    font-size: 108px!important;
   }
   
   .ellipse {
@@ -149,6 +154,7 @@
     .h1-h2 {
       display: block !important;
       position: absolute;
+      left: 308px;
     }
   
     h2 {
@@ -181,6 +187,10 @@
     .ellipse {
       height: 612px;
       width: 612px;
+    }
+
+    .h1-german {
+      font-size: 52px!important;
     }
   
     .h1-h2 {
@@ -219,15 +229,19 @@
     }
   
     .h1-h2 {
-      left: 164px;
+      left: 158px;
+    }
+
+    .h2 {
+      font-size: 24px!important;
     }
    
       .font-size-h1-frontend {
-        font-size: 54px!important;
+        font-size: 45px!important;
       }
   
       .font-size-h1-developer {
-        font-size: 48px!important;
+        font-size: 40px!important;
       }
   
   }

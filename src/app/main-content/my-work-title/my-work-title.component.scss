@@ -12,7 +12,7 @@
   }
 
   .ellipse5 {
-    top: 100px!important;
+    top: 100px;
   }
   
   .my-work {
@@ -60,6 +60,10 @@
       color: white;
     }
   }
+
+  .ellipse5 {
+    z-index: -200;
+  }
   
   @media (max-width: 1300px) {
     .my-work {
@@ -69,6 +73,10 @@
   
       h1 {
         font-size: 75px;
+      }
+
+      .ellipse5 {
+        top: 225px!important;
       }
   
       span {
@@ -98,9 +106,16 @@
     }
     .my-work {
       margin-left: 62px;
+     
       span {
         width: 400px;
       }
+    }
+  }
+
+  @media (max-width: 680px) {
+    .my-work {
+      line-height: 62px;
     }
   }
   
@@ -115,6 +130,7 @@
   
       span {
         width: 285px;
+        line-height: 25px;
       }
     }
   }

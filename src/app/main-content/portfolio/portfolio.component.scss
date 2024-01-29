@@ -68,7 +68,7 @@ h3 {
 .ellipse9 {
   right: 0;
   position: absolute;
-  top: 4100px;
+  top: 4180px;
   z-index: -999;
 }
 
@@ -182,6 +182,10 @@ h3 {
     position: absolute;
     margin-left: 270px;
   }
+
+  .ellipse4 {
+    top: 3400px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -239,12 +243,13 @@ h3 {
 }
 
 @media (max-width: 520px) {
-  .ellipse4 {
-    top: 3400px;
-  }
 
   .ellipse9 {
     top: 4760px;
+  }
+
+  .ellipse4 {
+    top: 3500px!important;
   }
 }
 
@@ -271,6 +276,8 @@ h3 {
     h3 {
       width: 250px;
     }
+
+   
   }
 
   .button-all {

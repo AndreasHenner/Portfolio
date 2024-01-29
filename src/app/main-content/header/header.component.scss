@@ -53,19 +53,22 @@
     }
   }
 
+  @media (max-width: 1300px) {
+    .header-links {
+      background: linear-gradient( -69.99deg, #5988ff 20.89%, #ffffff 65.39%);
+      background-clip: text;
+      -webkit-background-clip: text !important;
+      color: transparent !important;
+    }
+  }
+
   @media (max-width: 1000px) {
     .header {
       img {
         left: 40px;
       }
     }
-  
-    .header-links {
-      background: linear-gradient(-90.99deg, #5988ff 17.89%, #ffffff 100.39%);
-      background-clip: text;
-      -webkit-background-clip: text !important;
-      color: transparent !important;
-    }
+
   }
   
   @media (max-width: 720px) {

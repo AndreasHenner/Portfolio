@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
 
       setInterval(() => {
         let currentInnerWidth = window.innerWidth;
-        if (currentInnerWidth <= 550) {
+        if (currentInnerWidth <= 1100) {
           this.hideHeader = true;
         } else {
           this.hideHeader = false;
@@ -84,6 +84,7 @@ export class HeaderComponent implements OnInit {
 
     if (id === 'enBurger') {
       this.germanActivated = false;
+      this.languageService.setGermanActivated(false);
       aboutMeLink.textContent = 'About me';
       skillSetLink.textContent = 'Skill set';
       myWorkLink.textContent = 'My work';
@@ -91,6 +92,7 @@ export class HeaderComponent implements OnInit {
     }
     if (id === 'deBurger') {
       this.germanActivated = true;
+      this.languageService.setGermanActivated(true);
       aboutMeLink.textContent = 'Über mich';
       skillSetLink.textContent = 'Fähigkeiten';
       myWorkLink.textContent = 'Meine Projekte';

@@ -2,7 +2,7 @@
 
 
 <div class="filter-button">
-    <button (click)="filterProjects('all')" class="button-to-links filter button-all">All</button>
+    <button id="all" (click)="filterProjects('all')" class="button-to-links filter button-all">All</button>
     <button (click)="filterProjects('javascript')" class="button-to-links filter button-javascript">JavaScript</button>
     <button (click)="filterProjects('angular')" class="button-to-links filter button-angular">Angular</button>
     <button (click)="filterProjects('firebase')" class="button-to-links filter button-firebase">Firebase</button>
@@ -21,7 +21,7 @@
   <span>
     <h1 class="font-family-baloo">{{ project.title }}</h1>
     <h2 class="font-family-montserrat">{{ project.type }}</h2>
-    <h3 class="font-family-montserrat">{{ project.description }}</h3>
+    <h3 id="description" class="font-family-montserrat">{{ project.description }}</h3>
     <div class="portfolio-buttons">
       <button (click)="openGithub(i)" class="button-to-links">Github</button>
       <button (click)="openLivetest(i)" class="button-to-links">Live test</button>

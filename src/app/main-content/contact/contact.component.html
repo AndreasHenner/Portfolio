@@ -1,9 +1,9 @@
 <section id="contact" data-aos="flip-left" data-aos-offset="-1000">
-    <div class="contact-left">
-        <h1 class="font-family-baloo">Contact</h1>
-        <h2 class="font-family-montserrat">Got a problem to solve?</h2>
-        <span class="font-family-montserrat">Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
-        <p class="font-family-montserrat">Need a Frontend developer?<b> Contact me!</b></p>
+    <div [class.contact-left-german]="germanActivated" class="contact-left">
+        <h1 id="h1Contact" class="font-family-baloo">Contact</h1>
+        <h2 id="h2Contact" class="font-family-montserrat">Got a problem to solve?</h2>
+        <span id="textContact" class="font-family-montserrat">Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
+        <p id="text2Contact" class="font-family-montserrat">Need a Frontend developer?<b> Contact me!</b></p>
         <img src="assets/images/ellipse11.png">
         <div (click)="scrollToTop()" id="button-up"></div>
     </div>
@@ -12,7 +12,7 @@
         <input id="nameInput" required class="font-family-montserrat" placeholder="Your name" type="text" name="name">
         <input id="emailInput" required class="font-family-montserrat" placeholder="Your email" type="email">
         <textarea id="textareaInput" required class="font-family-montserrat" placeholder="Your message" name="message"></textarea>
-        <button type="submit" class="font-family-montserrat">Say hello ;)</button>
+        <button id="buttonContact" type="submit" class="font-family-montserrat">Say hello ;)</button>
     </form>
     
 </section>

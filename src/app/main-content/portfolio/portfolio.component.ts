@@ -1,6 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import AOS from 'aos';
+import { LanguageService } from './../../language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,8 +14,48 @@ export class PortfolioComponent implements OnInit {
   @Input() customClass: string = '';
   @Input() title: string = '';
   id = '';
+  germanActivated: boolean = false;
+  
 
-  constructor() {}
+  constructor(private languageService: LanguageService) {}
+
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1800,
+      offset: -200,
+    });
+
+    this.languageService.germanActivated$.subscribe((value) => {
+      this.germanActivated = value;
+      this.translate();
+    });
+  }
+
+  translate() {
+    if (this.germanActivated) {
+      let buttonAll: any = document.getElementById('all');
+      
+      this.projects[0].description = 'Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.';
+      this.projects[1].description = 'Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.';
+      this.projects[2].description = 'Ein lustiges Kartenspiel, das Sie auch online mit Ihren Freunden spielen können. Sie ziehen abwechselnd eine Karte. Nach jedem Zug müssen Sie den angezeigten Hinweis befolgen.';
+      this.projects[3].description = '...';
+   
+      buttonAll.textContent = 'Alle';
+     
+      
+    }
+    if (!this.germanActivated) {
+      let buttonAll: any = document.getElementById('all');
+
+      this.projects[0].description = 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.';
+      this.projects[1].description = 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.';
+      this.projects[2].description = 'A fun card game that you also can play online with your friends. You take it in turns to draw a card. After each move, you have to follow the displayed hint.';
+      this.projects[3].description = '...';
+
+      buttonAll.textContent = 'All';
+    }
+  }
+
 
   projects: any = [
     {
@@ -53,13 +94,6 @@ export class PortfolioComponent implements OnInit {
       linkgithub: '',
     },
   ];
-
-  ngOnInit(): void {
-    AOS.init({
-      duration: 1800,
-      offset: -200,
-    });
-  }
 
   ngAfterViewInit(): void {
     setTimeout(() => {

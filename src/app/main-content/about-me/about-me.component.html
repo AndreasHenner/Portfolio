@@ -1,11 +1,11 @@
 <section data-aos="zoom-in" id="aboutMe" class="about-me">
     <div class="font-family-baloo about-me-title-div">
-      <h1 class="about-me-title">Let´s work <br>togehter</h1>
+      <h1 id="title" class="about-me-title">Let´s work <br>togehter</h1>
     </div>
   
    <img class="ellipse6" src="assets/images/ellipse6.png">
     <div class="about-me-right-section">
-      <span>
+      <span id="textAboutMe">
         Hello, I am an aspiring junior Frontend developer and my name is Andreas Henner based in Laupheim near Ulm. 
         My focus is on programming languages, particularly on in-depth knowledge of JavaScript and TypeScript. 
         Additionally, I have experience with HTML, CSS for creating responsive user interfaces. 
@@ -16,8 +16,8 @@
         If you think I’d be a good match for your projects,
         contact me!
       </span>
-     <button class="button-message font-family-montserrat">
-      <a class="button-link" href="#contact" src="assets/images/ButtonSendAMessage.png">Send a message</a>
-     </button> 
+     <button [class.button-message-german]="germanActivated" class="button-message font-family-montserrat">
+      <a id="buttonMessage" class="button-link" href="#contact" src="assets/images/ButtonSendAMessage.png">Send a message</a>
+     </button>
     </div>
   </section>
