@@ -108,6 +108,13 @@ span {
   }
 }
 
+@media (min-width: 1300px) {
+  .about-me-title-german {
+    font-size: 100px!important;
+    margin-top: 185px;
+  }
+}
+
 @media (max-width: 1450px) {
   .about-me-right-section {
     span {
