@@ -41,7 +41,6 @@ export class AppComponent implements OnInit  {
     });
   }
 
-
   ngAfterViewInit(): void {
     setTimeout(() => {
       AOS.refresh();

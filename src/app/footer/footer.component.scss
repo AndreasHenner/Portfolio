@@ -96,3 +96,9 @@
       transition: 225ms ease;
     }
   }
+
+  @media (max-width: 450px) {
+    .footer {
+      margin-top: 760px;
+    }
+  }

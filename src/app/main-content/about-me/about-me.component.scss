@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin-top: 100px;
+  margin-left: 240px;
 
   h1 {
     width: 600px;
@@ -15,13 +16,17 @@
     width: 571px;
     height: 252px;
     margin-top: 70px;
-    margin-right: 100px;
+    margin-right: 245px;
   }
 }
 
 .about-me-title-div {
   margin-left: 100px;
   margin-top: -170px;
+}
+
+.about-me-title-div-german {
+  margin-top: -110px;
 }
 
 .about-me-title {
@@ -47,6 +52,11 @@ span {
   position: relative;
 }
 
+.about-me-title-german {
+  line-height: 95px;
+  margin-top: 95px!important;
+}
+
 .button-message {
   border-radius: 10px;
   font-size: 23px;
@@ -59,6 +69,7 @@ span {
   left: 932px;
   background-color: #ffffff;
   transition: 300ms ease-in-out;
+  margin-left: -250px;
 
   &:hover {
     cursor: pointer;
@@ -108,40 +119,54 @@ span {
   }
 }
 
-@media (min-width: 1300px) {
-  .about-me-title-german {
-    font-size: 100px!important;
-    margin-top: 185px;
-  }
-}
+
 
 @media (max-width: 1450px) {
   .about-me-right-section {
     span {
-      margin-right: 0;
+      margin-right: 245px;
     }
   }
 }
 
 @media (max-width: 1350px) {
-
   .about-me-title-div {
     margin-top: -90px;
+  }
+
+  .about-me-title-div-german {
+    margin-top: -315px;
+  }
+
+  .about-me-title {
+    margin-top: -115px;
+    line-height: 67px;
   }
   .about-me {
     h1 {
       font-size: 85px;
-      width: 300px;
     }
+  }
+
+  .about-me-title-german {
+    line-height: 75px;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 1300px) {
+  .about-me-title-german {
+    font-size: 85px !important;
+    margin-top: 200px;
+    line-height: 80px!important;
+  }
+
   .about-me {
     h1 {
       font-size: 75px;
       line-height: 65px;
-      margin-top: -45px;
+      margin-top: -115px;
+      width: 450px;
     }
 
     span {
@@ -149,6 +174,15 @@ span {
       width: 450px;
     }
   }
+
+  .about-me-title-div-german {
+    margin-top: -215px;
+  }
+
+  .about-me-title-div {
+    margin-top: -130px;
+  }
+  
 }
 
 @media (max-width: 1000px) {
@@ -162,9 +196,17 @@ span {
     h1 {
       width: 360px;
     }
-  }
 
-  
+    .about-me-right-section {
+      span {
+        margin-right: 0;
+      }
+    }
+
+    .button-message {
+      margin-left: -180px;
+    }
+  }
 
   .about-me-right-section {
     span {
@@ -189,6 +231,11 @@ span {
     width: 270px !important;
   }
 
+  .about-me-title-german {
+    line-height: 55px!important;
+    font-size: 57px!important;
+  }
+
   .about-me {
     margin-left: 90px !important;
     h1 {
@@ -196,10 +243,14 @@ span {
       margin-left: -110px;
       line-height: 55px;
     }
+
+    .button-message {
+      margin-left: -95px;
+    }
   }
 
   .button-message-german {
-    margin-top: 740px!important;
+    margin-top: 740px !important;
   }
 
   .button-message {
