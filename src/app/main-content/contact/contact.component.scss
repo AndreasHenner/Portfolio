@@ -115,7 +115,37 @@ section {
 }
 
 .contact-left-german {
-  margin-left: 5px!important;
+  margin-left: 5px !important;
+}
+
+.checkbox-div {
+  display: flex;
+  align-items: center;
+  margin-top: -90px;
+  margin-left: -330px;
+
+  a {
+   text-decoration: none;
+   color: #5988ff;
+  }
+
+  input {
+ margin-top: 100px;
+
+ &:hover {
+  outline: none;
+}
+  }
+
+  p {
+    margin-left: -280px;
+    color: black;
+  }
+ 
+}
+
+.checkbox {
+  transform: scale(0.3);
 }
 
 @media (max-width: 1300px) {
@@ -132,6 +162,18 @@ section {
   .contact-left {
     span {
       width: 450px;
+    }
+  }
+
+  .checkbox {
+   margin-left: -65px;
+  }
+
+  .checkbox-div {
+    margin-left: -180px;
+    p {
+      width: 400px;
+      margin-left: -200px;
     }
   }
 }
@@ -201,6 +243,25 @@ section {
       width: 280px;
     }
   }
+
+  .checkbox {
+    margin-left: -90px;
+    margin-top: 50px!important;
+   }
+ 
+   .checkbox-div {
+     margin-left: -90px;
+     width: 290px;
+
+     p {
+       width: 400px;
+       margin-left: -65px;
+     }
+   }
+
+   #button-up {
+    top: 400px;
+   }
 }
 
 @media (max-width: 350px) {
@@ -229,4 +290,15 @@ section {
       font-size: 22px;
     }
   }
+
+ 
+ 
+   .checkbox-div {
+     margin-left: -67px;
+     width: 290px;
+
+     p {
+      width: 350px;
+     }
+   }
 }

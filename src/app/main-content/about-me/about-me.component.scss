@@ -71,7 +71,12 @@ span {
   transition: 300ms ease-in-out;
   margin-left: -250px;
 
+  a {
+    padding: 24px;
+  }
+
   &:hover {
+    color: white;
     cursor: pointer;
     background: radial-gradient(
       74.22% 74.22% at 19.79% 22.42%,
@@ -79,7 +84,6 @@ span {
       #5988ff 51.56%,
       #0043f0 100%
     );
-    color: white;
     transition: 300ms ease-in-out;
   }
 }
@@ -120,11 +124,10 @@ span {
 }
 
 
-
 @media (max-width: 1450px) {
   .about-me-right-section {
     span {
-      margin-right: 245px;
+      margin-right: 310px;
     }
   }
 }

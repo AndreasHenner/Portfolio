@@ -31,7 +31,7 @@ export class AboutMeComponent {
     if (this.germanActivated) {
       textAboutMe.textContent = 'Hallo, ich bin ein Junior Frontend-Entwickler und mein Name ist Andreas Henner aus Laupheim bei Ulm. Mein Focus liegt auf Programmiersprachen, insbesondere auf vertieften Kenntnissen in JavaScript und TypeScript. Zusätzlich habe ich Erfahrung mit HTML, CSS zur Erstellung von responsiven Benutzeroberflächen. Ich bin motiviert, ständig neue Technologien zu erlernen und innovative Lösungen zu entwickeln, was mich zu einem großartigen Teamplayer macht. Ich genieße die effektive Zusammenarbeit und den Beitrag zu kreativen Lösungen in einem Team. Ich strebe danach, mein Wissen zu vertiefen und aktiv an Projekten teilzunehmen, um praktische Erfahrungen zu sammeln. Ich bin derzeit auf der Suche nach einem inspirierenden Umfeld, um meine Fähigkeiten weiterzuentwickeln. Wenn Sie glauben, dass ich gut zu Ihren Projekten passe, kontaktieren Sie mich! ';
       h1.textContent = 'ENTWICKLER';
-      buttonMessage.textContent = 'Sende eine Nachricht';
+      buttonMessage.textContent = 'Nachricht';
       title.textContent = 'Lassen Sie uns zusammen arbeiten';
     }
     if (!this.germanActivated) {

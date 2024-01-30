@@ -12,6 +12,10 @@
         <input id="nameInput" required class="font-family-montserrat" placeholder="Your name" type="text" name="name">
         <input id="emailInput" required class="font-family-montserrat" placeholder="Your email" type="email">
         <textarea id="textareaInput" required class="font-family-montserrat" placeholder="Your message" name="message"></textarea>
+        <div class="checkbox-div font-family-baloo">
+          <input required class="checkbox" type="checkbox">
+          <p>I´ve read the <a (click)="scrollToTop()" [routerLink]="['imprint']">privacy Policy</a> and agree to the processing of my data as outlined!</p>
+        </div> 
         <button id="buttonContact" type="submit" class="font-family-montserrat">Say hello ;)</button>
     </form>
     
