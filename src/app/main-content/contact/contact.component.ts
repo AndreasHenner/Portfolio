@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { LanguageService } from './../../language.service';
 import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,NgIf],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -27,6 +28,10 @@ export class ContactComponent {
     let textContact: any = document.getElementById('textContact');
     let text2Contact: any = document.getElementById('text2Contact');
     let buttonContact: any = document.getElementById('buttonContact');
+    let namePlaceholder: any = document.getElementById('nameInput');
+    let mailPlaceholder: any = document.getElementById('emailInput');
+    let textPlaceholder: any = document.getElementById('textareaInput');
+
 
     if (this.germanActivated) {
       h1Contact.textContent = 'Kontakt';
@@ -34,6 +39,10 @@ export class ContactComponent {
       textContact.textContent = 'Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, Ihnen zuzuhören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.';
       text2Contact.textContent = 'Sie brauchen einen Webentwickler? Kontaktieren Sie mich!';
       buttonContact.textContent = 'Hallo ;)';
+      namePlaceholder.placeholder = 'Ihr Name';
+      mailPlaceholder.placeholder = 'Ihre email';
+      textPlaceholder.placeholder = 'Ihre Nachricht';
+    
     }
     if (!this.germanActivated) {
       h1Contact.textContent = 'Contact';
@@ -41,7 +50,10 @@ export class ContactComponent {
       textContact.textContent = 'Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.';
       text2Contact.textContent = 'Need a Frontend developer? Contact me!';
       buttonContact.textContent = 'Say hello ;)';
-      
+      namePlaceholder.placeholder = 'Your name';
+      mailPlaceholder.placeholder = 'Your email';
+      textPlaceholder.placeholder = 'Your message';
+
     }
   }
 

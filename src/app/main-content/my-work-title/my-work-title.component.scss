@@ -114,7 +114,15 @@
 
   @media (max-width: 680px) {
     .my-work {
-      line-height: 62px;
+      line-height: 33px;
+
+      span {
+        margin-top: 20px!important;
+      }
+    }
+
+    .my-work-title-german {
+      line-height: 60px;
     }
   }
   

@@ -9,10 +9,12 @@
   
   .header-logo {
     position: relative;
-    height: 69px;
-    width: 64px;
+    height: 115px;
+    width: 115px;
     left: 100px;
     z-index: 999;
+    top: 20px;
+    border-radius: 25px;
   }
   
   .header-links {
@@ -39,7 +41,7 @@
   
   .burger-menu-button {
     position: relative;
-    left: -23px !important;
+    left: -30px !important;
     z-index: 1500;
   
     &:hover {
@@ -63,12 +65,10 @@
   }
 
   @media (max-width: 1000px) {
-    .header {
-      img {
-        left: 40px;
-      }
+    .header-logo {
+        left: 55px;
+        top: 10px;
     }
-
   }
   
   @media (max-width: 720px) {
@@ -76,6 +76,14 @@
       gap: 14px;
       margin-right: 34px;
     }
+
+    .header-logo {
+      left: 35px;
+      height: 80px;
+      width: 80px;
+      top: 4px;
+  }
+
   }
   
   @media only screen and (max-width: 550px) {
@@ -90,6 +98,14 @@
     .burger-menu-button:hover {
       filter: brightness(1.35);
     }
+  }
+
+  @media (max-width: 450px) {
+    .header-logo {
+      left: 8px;
+      height: 70px;
+      width: 70px;
+  }
   }
   
   // Burger-Menu

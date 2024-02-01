@@ -148,6 +148,14 @@ section {
   transform: scale(0.3);
 }
 
+.form-german {
+  margin-left: -344px;
+
+  p {
+    width: 535px;
+  }
+}
+
 @media (max-width: 1300px) {
   form {
     input {
@@ -291,8 +299,6 @@ section {
     }
   }
 
- 
- 
    .checkbox-div {
      margin-left: -67px;
      width: 290px;
