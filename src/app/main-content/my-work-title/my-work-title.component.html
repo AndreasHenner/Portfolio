@@ -1,10 +1,12 @@
-<section class="my-work-div">
-
-    <div id="myWork" class="my-work">
-      <h1 id="myWorkTitle" [class.my-work-title-german]="germanActivated" class="font-family-baloo">My work</h1>
-      <span id="myWorkText" class="font-family-montserrat span">Here you find a sample of my work - please feel free to try them out.</span>
-    </div>
+<section [class.section-my-work-german]="germanActivated" class="my-work-div">
+<div class="section-my-work">
+  <div id="myWork" class="my-work">
+    <h1 id="myWorkTitle" [class.my-work-title-german]="germanActivated" class="font-family-baloo">My work</h1>
+    <span id="myWorkText" [class.my-work-text-german]="germanActivated" class="font-family-montserrat span">Here you find a sample of my work - please feel free to try them out.</span>
+  </div>
+ 
+  <img class="ellipse5" src="assets/images/ellipse5.png"/>
+</div>
    
-    <img class="ellipse5" src="assets/images/ellipse5.png"/>
     
   </section>

@@ -61,15 +61,42 @@ export class ContactComponent {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  emptyInputfields() {
+
+   sendMail() {
+    var form:any = document.getElementById('contactForm');
+    var formData = new FormData(form);
+
     let nameInput = document.getElementById('nameInput') as HTMLInputElement;
     let emailInput = document.getElementById('emailInput') as HTMLInputElement;
     let textareaInput = document.getElementById('textareaInput') as HTMLTextAreaElement;
+    let checkbox:any = document.querySelector('.checkbox');
 
-    setTimeout(() => {
     nameInput.value = '';
     emailInput.value = '';
-    textareaInput.value = '';
-},1000) 
-  }
+    checkbox.checked = false;
+    textareaInput.value = 'Email erfolgreich versendet';
+    setTimeout(() => {
+      textareaInput.value = '';
+    }, 2000);
+
+    // Fetch API um die E-Mail zu senden
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+          
+            
+            setTimeout(() => {
+              form.reset();
+              window.location.reload();
+          }, 4000);
+        } 
+    })
+    .catch(error => {
+        console.error('Fehler beim Senden der E-Mail:', error);
+        alert('Fehler beim Senden der E-Mail.');
+    });
+}
 }

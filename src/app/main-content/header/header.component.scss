@@ -1,14 +1,21 @@
 .header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 117px;
     width: 100vw;
-  
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-header {
+    margin-top: 20px;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    gap: 535px;
+    justify-content: space-evenly;
   }
   
   .header-logo {
-    position: relative;
     height: 115px;
     width: 115px;
     left: 100px;
@@ -21,7 +28,7 @@
     z-index: 200;
     display: flex;
     gap: 40px;
-    margin-right: 120px;
+    margin-right: 60px;
   
     a {
       text-decoration: none;
@@ -41,7 +48,7 @@
   
   .burger-menu-button {
     position: relative;
-    left: -30px !important;
+    left: 15px !important;
     z-index: 1500;
   
     &:hover {
@@ -55,14 +62,15 @@
     }
   }
 
-  @media (max-width: 1300px) {
-    .header-links {
-      background: linear-gradient( -69.99deg, #5988ff 20.89%, #ffffff 65.39%);
-      background-clip: text;
-      -webkit-background-clip: text !important;
-      color: transparent !important;
+
+  @media (max-width: 1500px) {
+    .section-header{
+      position: absolute;
+      left: 37px;
+      gap: 442px !important;
     }
   }
+
 
   @media (max-width: 1000px) {
     .header-logo {
@@ -72,6 +80,10 @@
   }
   
   @media (max-width: 720px) {
+    .section-header {
+     gap: 320px!important;
+    }
+
     .header-links {
       gap: 14px;
       margin-right: 34px;
@@ -87,12 +99,17 @@
   }
   
   @media only screen and (max-width: 550px) {
+
+    .section-header {
+      gap: 145px!important;
+    }
     .header-links {
       display: none; /* Hier kannst du auch andere Stile für den Handymodus festlegen */
     }
   
     .burger-menu-button {
       display: block !important;
+      left: 145px!important;
     }
   
     .burger-menu-button:hover {
@@ -105,6 +122,11 @@
       left: 8px;
       height: 70px;
       width: 70px;
+  }
+
+  .burger-menu-button {
+    display: block !important;
+    left: 55px!important;
   }
   }
   
@@ -136,7 +158,7 @@
   }
   
   .show-burger-menu {
-    z-index: 3100;
+    z-index: 10000;
     width: 100vw;
     background-color: white;
     position: absolute;
@@ -146,7 +168,7 @@
   }
   
   .hide-burger-menu {
-    z-index: 3100;
+    z-index: 10000;
     width: 100vw;
     background-color: white;
     position: absolute;
@@ -154,3 +176,5 @@
     transform: scale(0);
     transition: transform 500ms ease-in-out;
   }
+
+ 

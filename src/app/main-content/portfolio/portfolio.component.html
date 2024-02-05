@@ -1,35 +1,35 @@
 <img class="ellipse4" src="assets/images/ellipse4.png"/>
 
-
-<div class="filter-button">
+<div class="section-filter">
+  <div class="filter-button">
     <button id="all" (click)="filterProjects('all')" class="button-to-links filter button-all">All</button>
     <button (click)="filterProjects('javascript')" class="button-to-links filter button-javascript">JavaScript</button>
     <button (click)="filterProjects('angular')" class="button-to-links filter button-angular">Angular</button>
     <button (click)="filterProjects('firebase')" class="button-to-links filter button-firebase">Firebase</button>
 </div>
+</div>
 
-<section *ngFor="let project of projects; let i = index" class="section-join"
-  [class.display-none]="
+
+<section *ngFor="let project of projects; let i = index" class="section-join"[class.display-none]="
     (!project.type.includes('Javascript') && javascriptActive) ||
     (!project.type.includes('Angular') && angularActive) ||
     (!project.type.includes('Firebase') && firebaseActive)"
-  [class.section-right-to-left]="i % 2 !== 0"
+  
   data-aos="zoom-in" data-aos-offset="-1000">
 
-  <img [class.object-fit]="project.image === 'assets/images/ringoffire.jpg'" class="project-img" [src]="getProjectImage(project)"/>
+  <div [class.section-right-to-left]="i % 2 !== 0" class="section-portfolio">
+    <img [class.object-fit]="project.image === 'assets/images/ringoffire.jpg'" class="project-img" [src]="getProjectImage(project)"/>
 
-  <span>
-    <h1 class="font-family-baloo">{{ project.title }}</h1>
-    <h2 class="font-family-montserrat">{{ project.type }}</h2>
-    <h3 id="description" class="font-family-montserrat">{{ project.description }}</h3>
-    <div class="portfolio-buttons">
-      <button (click)="openGithub(i)" class="button-to-links">Github</button>
-      <button (click)="openLivetest(i)" class="button-to-links">Live test</button>
-    </div>
-  </span>
+    <span>
+      <h1 class="font-family-baloo">{{ project.title }}</h1>
+      <h2 class="font-family-montserrat">{{ project.type }}</h2>
+      <h3 id="description" class="font-family-montserrat">{{ project.description }}</h3>
+      <div class="portfolio-buttons">
+        <button (click)="openGithub(i)" class="button-to-links">Github</button>
+        <button (click)="openLivetest(i)" class="button-to-links">Live test</button>
+      </div>
+    </span>
+  </div>
 
 </section>
-
-
-
 <img class="ellipse9" src="assets/images/ellipse9.png" />

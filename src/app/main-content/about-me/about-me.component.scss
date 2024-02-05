@@ -1,9 +1,16 @@
+.section-div-about-me {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 1440px;
+}
+
 .about-me {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 100px;
-  margin-left: 240px;
+  margin-left: 0;
 
   h1 {
     width: 600px;
@@ -16,12 +23,11 @@
     width: 571px;
     height: 252px;
     margin-top: 70px;
-    margin-right: 245px;
+    margin-right: 0;
   }
 }
 
 .about-me-title-div {
-  margin-left: 100px;
   margin-top: -170px;
 }
 
@@ -54,7 +60,7 @@ span {
 
 .about-me-title-german {
   line-height: 95px;
-  margin-top: 95px!important;
+  margin-top: 95px !important;
 }
 
 .button-message {
@@ -69,7 +75,7 @@ span {
   left: 932px;
   background-color: #ffffff;
   transition: 300ms ease-in-out;
-  margin-left: -250px;
+  margin-left: -315px;
 
   a {
     padding: 24px;
@@ -123,12 +129,30 @@ span {
   }
 }
 
-
 @media (max-width: 1450px) {
   .about-me-right-section {
     span {
-      margin-right: 310px;
+      margin-left: 250px;
     }
+  }
+
+  .about-me-title-div {
+    width: 200px;
+  }
+
+  .about-me {
+    span {
+      width: 400px;
+      font-size: 18px;
+    }
+  }
+
+  .about-me-title {
+    font-size: 100px;
+  }
+
+  .button-message {
+    margin-left: 110px;
   }
 }
 
@@ -155,13 +179,17 @@ span {
     line-height: 75px;
     margin-top: 20px;
   }
+
+  .button-message {
+    margin-left: 105px;
+  }
 }
 
 @media (max-width: 1300px) {
   .about-me-title-german {
     font-size: 85px !important;
     margin-top: 200px;
-    line-height: 80px!important;
+    line-height: 80px !important;
   }
 
   .about-me {
@@ -185,10 +213,17 @@ span {
   .about-me-title-div {
     margin-top: -130px;
   }
-  
 }
 
 @media (max-width: 1000px) {
+  .about-me-title-div {
+    margin-left: 105px;
+  }
+  
+  .section-div-about-me {
+    flex-direction: column;
+  }
+
   .about-me {
     left: 150px;
     flex-direction: column;
@@ -203,6 +238,7 @@ span {
     .about-me-right-section {
       span {
         margin-right: 0;
+        margin-left: -50px;
       }
     }
 
@@ -238,13 +274,14 @@ span {
     width: 270px !important;
   }
 
-  .h2-german {
-    width: 366px!important;
+  .about-me-title-german {
+    line-height: 55px !important;
+    font-size: 52px !important;
   }
 
-  .about-me-title-german {
-    line-height: 55px!important;
-    font-size: 57px!important;
+  .section-div-about-me {
+    width: 300px;
+    margin-left: -75px;
   }
 
   .about-me {
@@ -253,10 +290,11 @@ span {
       font-size: 56px;
       margin-left: -110px;
       line-height: 55px;
+      width: 300px;
     }
 
     .button-message {
-      margin-left: -95px;
+      margin-left: -60px;
     }
   }
 
@@ -272,5 +310,18 @@ span {
   .ellipse6 {
     left: 70px;
     top: 100px;
+  }
+
+  .about-me-h1 {
+    width: 230px;
+  }
+
+  .about-me-title {
+    width: 270px !important;
+    margin-left: -90px !important;
+  }
+
+  .about-me-right-section {
+    margin-left: 55px!important;
   }
 }

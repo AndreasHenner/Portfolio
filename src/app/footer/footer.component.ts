@@ -11,6 +11,7 @@ import { LanguageService } from './../language.service';
 })
 export class FooterComponent {
   germanActivated: boolean = false;
+  @Input() imprintClicked = false;
 
   constructor(private languageService: LanguageService) {}
 
@@ -24,7 +25,6 @@ export class FooterComponent {
   translate() {
     let imprint: any = document.getElementById('imprint');
 
-
     if (this.germanActivated) {
       imprint.textContent = 'Impressum';
     
@@ -36,9 +36,8 @@ export class FooterComponent {
     }
   }
 
-  @Input() imprintClicked = false;
-
   scrollToTop() {
+    this.imprintClicked = true;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 

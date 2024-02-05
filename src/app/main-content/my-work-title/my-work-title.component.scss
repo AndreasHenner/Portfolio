@@ -1,3 +1,8 @@
+
+.section-my-work {
+  margin-left: -400px;
+}
+
 .my-work-div {
     display: flex;
     align-items: baseline;
@@ -62,13 +67,18 @@
 
   .ellipse5 {
     z-index: -200;
+ 
   }
   
   @media (max-width: 1300px) {
+    .section-my-work {
+      margin-left: 90px;
+    }
+
     .my-work {
       display: flex;
       justify-content: space-evenly;
-      margin-left: 335px;
+      margin-left: 30px;
   
       h1 {
         font-size: 75px;
@@ -92,10 +102,24 @@
     .my-work-div {
       margin-top: 0;
     }
+
+    #myWorkText {
+      width: 540px;
+    }
+
+  .my-work {
+    margin-left: -41px;
+    > span {
+      width: 540px;
+    }
+  }
   }
   
   @media (max-width: 750px) {
-  
+    .section-my-work {
+      margin-left: -70px;
+    }
+
     .my-work-div {
       margin-left: 25px;
   
@@ -109,6 +133,14 @@
       span {
         width: 400px;
       }
+
+      h1 {
+        line-height: 70px;
+      }
+    }
+
+    #myWorkText {
+      width: 311px!important;
     }
   }
 
@@ -125,8 +157,26 @@
       line-height: 60px;
     }
   }
+
+@media (max-width: 520px) {
+  .my-work-title-german {
+    margin-left: 30px;
+  }
+
+  .my-work-text-german {
+    margin-left: 20px;
+  }
+
+  #myWorkText {
+    width: 289px!important;
+  }
+}
   
   @media (max-width: 450px) {
+    .section-my-work-german {
+      margin-left: -50px!important;
+    }
+
     .my-work {
       width: 278px;
       margin-left: 90px;

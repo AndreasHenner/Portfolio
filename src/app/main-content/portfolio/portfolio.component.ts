@@ -91,16 +91,14 @@ export class PortfolioComponent implements OnInit {
     },
   ];
 
-
-
   openGithub(i: any): void {
     let github = this.projects[i].linkgithub;
-    window.open(github);
+    window.open(github, '_self');
   }
 
   openLivetest(i: any): void {
     let livetest = this.projects[i].linklivetest;
-    window.open(livetest);
+    window.open(livetest, '_self');
   }
 
   getProjectImage(project: any): string {

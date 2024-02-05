@@ -77,7 +77,7 @@
 
 @media (max-width: 750px) {
   .skill-set {
-    margin-top: 150px;
+    margin-top: 300px;
   }
 
   .skill-set-german {
@@ -86,6 +86,12 @@
   .skill-set-icons-row {
     gap: 62px;
     max-width: 649px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .skill-set {
+    margin-top: 125px;
   }
 }
 

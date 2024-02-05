@@ -16,7 +16,7 @@ import { LanguageService } from './../../language.service';
 export class HeaderComponent implements OnInit {
   hideHeader = false;
   burgerMenuActive = false;
-
+  @Input() imprintClicked = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private languageService: LanguageService) {
     if (isPlatformBrowser(this.platformId)) {
@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
 
       setInterval(() => {
         let currentInnerWidth = window.innerWidth;
-        if (currentInnerWidth <= 1100) {
+        if (currentInnerWidth <= 1350) {
           this.hideHeader = true;
         } else {
           this.hideHeader = false;
@@ -34,6 +34,8 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleBurgerMenu(burgerMenuActive: any) {
+    this.imprintClicked = false;
+    console.log(this.imprintClicked);
     this.burgerMenuActive = !this.burgerMenuActive;
   }
 
@@ -72,7 +74,7 @@ export class HeaderComponent implements OnInit {
       this.languageService.setGermanActivated(true);
       aboutMeLink.textContent = 'Über mich';
       skillSetLink.textContent = 'Fähigkeiten';
-      myWorkLink.textContent = 'Meine Projekte';
+      myWorkLink.textContent = 'Projekte';
     }
   }
 
@@ -95,7 +97,7 @@ export class HeaderComponent implements OnInit {
       this.languageService.setGermanActivated(true);
       aboutMeLink.textContent = 'Über mich';
       skillSetLink.textContent = 'Fähigkeiten';
-      myWorkLink.textContent = 'Meine Projekte';
+      myWorkLink.textContent = 'Projekte';
       contactLink.textContent = 'Kontakt';
     }
   }
