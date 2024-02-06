@@ -14,10 +14,13 @@
             <input id="emailInput" required class="font-family-montserrat" placeholder="Your email" type="email">
             <textarea id="textareaInput" required class="font-family-montserrat" placeholder="Your message" name="message"></textarea>
             <div [class.form-german]="germanActivated" class="checkbox-div font-family-baloo">
+              <span id="error" class="error"></span>
+              <span id="sucess" class="sucess"></span>
               <input required class="checkbox" type="checkbox">
               <p>
                <ng-container *ngIf="germanActivated; else englishText">Ich habe die <a (click)="scrollToTop()" [routerLink]="['imprint']">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu!</ng-container>
-               <ng-template #englishText>I´ve read the <a (click)="scrollToTop()" [routerLink]="['imprint']">privacy Policy</a> and agree to the processing of my data as outlined!</ng-template></p>
+               <ng-template #englishText>I´ve read the <a (click)="scrollToTop()" [routerLink]="['imprint']">privacy Policy</a> and agree to the processing of my data as outlined!</ng-template>
+              </p>
             </div> 
             <button (click)="sendMail()" id="buttonContact" type="submit" class="font-family-montserrat">Say hello ;)</button>
         </form>

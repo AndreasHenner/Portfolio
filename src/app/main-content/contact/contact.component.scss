@@ -159,11 +159,27 @@ section {
 }
 
 .form-german {
-  margin-left: -344px;
+  margin-left: -266px;
 
   p {
     width: 535px;
   }
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 34px;
+  margin-left: 273px;
+  width: 190px!important;
+}
+
+.sucess {
+  color: green;
+  font-weight: bold;
+  margin-top: 34px;
+  margin-left: 273px;
+  width: 190px!important;
 }
 
 @media (max-width: 1300px) {
@@ -265,8 +281,8 @@ section {
   }
 
   #button-up {
-    left: 12px;
-    top: 335px!important;
+    left: 0px;
+    top: 415px!important;
   }
 
   .contact-left {
@@ -306,6 +322,18 @@ section {
 
   #button-up {
     top: 400px;
+  }
+
+  .error {
+    margin-left: 70px;
+    margin-top: 5px!important;
+    width: 190px!important;
+  }
+  
+  .sucess {
+    margin-left: 90px;
+    margin-top: 5px!important;
+    width: 190px!important;
   }
 }
 
@@ -349,5 +377,17 @@ section {
     p {
       width: 350px;
     }
+  }
+
+  .error {
+    margin-left: 50px;
+    margin-top: 5px!important;
+    width: 190px;
+  }
+  
+  .sucess {
+    margin-left: 70px;
+    margin-top: 5px!important;
+    width: 190px;
   }
 }
