@@ -22,6 +22,7 @@ export class ContactComponent {
       this.germanActivated = value;
       this.translate();
     });
+    this.setValidation();
   }
 
   translate() {
@@ -92,16 +93,32 @@ export class ContactComponent {
          error.textContent = '';
        }, 3000);
    }
-  
+   
    formValid = false;
 
+   setValidation() {
+    let nameInput = document.getElementById('nameInput') as HTMLInputElement;
+    let emailInput = document.getElementById('emailInput') as HTMLInputElement;
+    let textareaInput = document.getElementById('textareaInput') as HTMLTextAreaElement;
+    let checkbox: HTMLInputElement = document.querySelector('.checkbox') as HTMLInputElement;
+    
+    setInterval(() => {
+        if (nameInput && emailInput && textareaInput && checkbox) {
+            // Überprüfe, ob alle Eingabefelder nicht leer sind und die Checkbox ausgewählt ist
+            if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && textareaInput.value.trim() !== '' && checkbox.checked) {
+                this.formValid = true;
+            } else {
+            }
+        }
+    }, 100); 
+}
+  
   sendMail() {
     // Zugriff auf das Formular über das Template-Referenzobjekt
     let form = document.getElementById('contactForm') as HTMLFormElement;
     // Überprüfen, ob das Formular gültig ist
     if (form.checkValidity()) {
-       this.formValid = true;
-       console.log(this.formValid);
+        this.formValid = true;
         // Wenn das Formular gültig ist, führe den Versand aus
         var formData = new FormData(form);
         // Fetch API um die E-Mail zu senden

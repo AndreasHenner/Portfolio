@@ -4,7 +4,6 @@ body {
 
 @media (max-height: 350px) and (orientation: portrait){
   * {
-  
     overflow: hidden;
   }
 }
@@ -13,8 +12,6 @@ body {
     margin: 0;
     scroll-behavior: smooth;
 }
-
-
 
 /* montserrat-100 - latin */
 @font-face {

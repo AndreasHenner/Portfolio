@@ -47,9 +47,10 @@
   }
   
   .burger-menu-button {
-    position: relative;
-    left: 15px !important;
-    z-index: 1500;
+    position: absolute;
+    top: 50px;
+    right: 45px;
+    z-index: 100000;
   
     &:hover {
       cursor: pointer;
@@ -106,12 +107,7 @@
     .header-links {
       display: none; /* Hier kannst du auch andere Stile für den Handymodus festlegen */
     }
-  
-    .burger-menu-button {
-      display: block !important;
-      left: 145px!important;
-    }
-  
+
     .burger-menu-button:hover {
       filter: brightness(1.35);
     }
@@ -125,8 +121,7 @@
   }
 
   .burger-menu-button {
-    display: block !important;
-    left: 55px!important;
+  right: 35px;
   }
   }
   
@@ -139,7 +134,7 @@
     display: flex;
     gap: 40px;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 200px;
   
     a {
       text-decoration: none;
@@ -162,7 +157,8 @@
     width: 100vw;
     background-color: white;
     position: absolute;
-    height: 460px;
+    height: 1000%;
+    top: 0;
     transform: scale(1);
     transition: transform 500ms ease-in-out;
   }
@@ -172,7 +168,8 @@
     width: 100vw;
     background-color: white;
     position: absolute;
-    height: 460px;
+    height: 1000%;
+    top: 0;
     transform: scale(0);
     transition: transform 500ms ease-in-out;
   }

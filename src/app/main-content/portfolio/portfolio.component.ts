@@ -78,7 +78,7 @@ export class PortfolioComponent implements OnInit {
       type: 'Angular | Typescript | HTML | CSS | Firebase',
       description: 'A fun card game that you also can play online with your friends. You take it in turns to draw a card. After each move, you have to follow the displayed hint.',
       linklivetest: 'https://andreas-henner.com/Ringoffire/index.html',
-      linkgithub: 'https://github.com/AndreasHenner/ringoffire',
+      linkgithub: 'https://github.com/AndreasHenner/ringoffire'
     },
 
     {
@@ -93,12 +93,12 @@ export class PortfolioComponent implements OnInit {
 
   openGithub(i: any): void {
     let github = this.projects[i].linkgithub;
-    window.open(github, '_self');
+    window.open(github);
   }
 
   openLivetest(i: any): void {
     let livetest = this.projects[i].linklivetest;
-    window.open(livetest, '_self');
+    window.open(livetest);
   }
 
   getProjectImage(project: any): string {

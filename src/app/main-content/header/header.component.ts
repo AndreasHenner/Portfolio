@@ -35,7 +35,6 @@ export class HeaderComponent implements OnInit {
 
   toggleBurgerMenu(burgerMenuActive: any) {
     this.imprintClicked = false;
-    console.log(this.imprintClicked);
     this.burgerMenuActive = !this.burgerMenuActive;
   }
 
@@ -54,7 +53,6 @@ export class HeaderComponent implements OnInit {
     } else {
       this.burgerMenuTranslate(id);
     }
-    console.log('German Activated in Header Section:', this.germanActivated);
   }
 
   headerTranslate(id: any) {

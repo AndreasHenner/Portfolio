@@ -205,7 +205,7 @@ h3 {
   }
 
   .ellipse4 {
-    top: 3450px;
+    top: 3325px;
   }
 }
 
@@ -270,7 +270,7 @@ h3 {
 
 @media (max-width: 520px) {
   .ellipse9 {
-    top: 4500px;
+    top: 4250px;
   }
 
   .ellipse4 {
@@ -338,5 +338,9 @@ h3 {
   .button-to-links {
     font-size: 15px;
     height: 40px;
+  }
+
+  .ellipse4 {
+    margin-top: 1300px!important;
   }
 }

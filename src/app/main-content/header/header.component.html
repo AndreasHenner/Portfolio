@@ -1,10 +1,10 @@
 
 <section id="home" class="header">
     <div class="section-header">
-        <img class="header-logo" src="assets/images/logoAH.png">
+        <img class="header-logo" src="assets/images/2.png">
         <span [class.display-none]="hideHeader" class="header-links font-family-montserrat">
             <a id="home1" href="#home">Home</a>
-            <a id="aboutMe1" href="#aboutMe">About me</a>
+            <a id="aboutMe1" href="#title">About me</a>
             <a id="skillSet1" href="#skillSet">Skill set</a>
             <a id="myWork1" href="#myWork">My work</a>
             <div class="languages">
@@ -13,15 +13,15 @@
             </div>
             
         </span> 
-        <img [class.display-none]="!hideHeader" (click)="toggleBurgerMenu(burgerMenuActive)" class="burger-menu-button" src="assets/images/burgerMenu.png">
-    </div>
        
+    </div>
+    <img [class.display-none]="!hideHeader" (click)="toggleBurgerMenu(burgerMenuActive)" class="burger-menu-button" src="assets/images/burgerMenu.png">
 </section>
 
 <section [class.show-burger-menu]="burgerMenuActive" [class.hide-burger-menu]="!burgerMenuActive">
     <div class="header-links-burger font-family-montserrat">
         <a id="homeBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#home">Home</a>
-        <a id="aboutMeBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#aboutMe">About me</a>
+        <a id="aboutMeBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#title">About me</a>
         <a id="skillSetBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#skillSet">Skill set</a>
         <a id="myWorkBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#myWork">My work</a>
         <a id="contactBurger" (click)="closeBurgerMenuWithLinks(burgerMenuActive)" href="#contact">Contact</a>

@@ -11,7 +11,7 @@
     
         <form id="contactForm" action="https://andreas-henner.com/send_mail/send_mail.php" method="post">
             <input id="nameInput" required class="font-family-montserrat" placeholder="Your name" type="text" name="name">
-            <input id="emailInput" required class="font-family-montserrat" placeholder="Your email" type="email">
+            <input id="emailInput" required class="font-family-montserrat" placeholder="Your email" type="email" name="email">
             <textarea id="textareaInput" required class="font-family-montserrat" placeholder="Your message" name="message"></textarea>
             <div [class.form-german]="germanActivated" class="checkbox-div font-family-baloo">
               <span id="error" class="error"></span>
@@ -22,7 +22,7 @@
                <ng-template #englishText>I´ve read the <a (click)="scrollToTop()" [routerLink]="['imprint']">privacy Policy</a> and agree to the processing of my data as outlined!</ng-template>
               </p>
             </div> 
-            <button (click)="sendMail()" id="buttonContact" type="submit" class="font-family-montserrat">Say hello ;)</button>
+            <button [class.cursor-not-allowed]="!formValid" (click)="sendMail()" id="buttonContact" type="submit" class="font-family-montserrat">Say hello ;)</button>
         </form>
     </div>
     

@@ -23,5 +23,5 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
-
+ 
 }
